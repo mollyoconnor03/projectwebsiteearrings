@@ -1,0 +1,26 @@
+<!-- templates/earring_list.html -->
+{% extends "base.html" %}
+
+{% block title %}Molly's Earrings{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for earring in earrings %}
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ earring.earring_type }}</h5>
+                        <img class="card-img-top" src="{{ url_for('static', filename=earring.imageUrl) }}" alt="{{ earring.earring_type }}" />
+                        <p class="card-text"><strong>Metal:</strong> {{ earring.metal }}</p>
+                        <p class="card-text"><strong>Price:</strong> {{ earring.price }}</p>  <!-- Display price -->
+                        <a class="btn btn-primary" href="{{ url_for('show_earring', earring_id=earring.earring_id) }}">View Earrings</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

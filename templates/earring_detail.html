@@ -1,0 +1,21 @@
+<!-- templates/earring_detail.html -->
+{% extends "base.html" %}
+
+{% block title %}{{ earring.earring_type }} - Molly's Earrings{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h1 class="display-5">{{ earring.earring_type }}</h1>
+        <p class="lead">{{ earring.description }}</p>
+        <p><strong>Metal:</strong> {{ earring.metal }}</p>
+        <p><strong>Price:</strong> {{ earring.price }}</p>  <!-- Display price -->
+        <div class="mt-4">
+            <a href="{{ url_for('show_earrings') }}" class="btn btn-secondary">Back to Earrings</a>
+            <form action="{{ url_for('add_to_cart', earring_id=earring.earring_id) }}" method="POST" style="display:inline;">
+                <button type="submit" class="btn btn-success">Buy Earrings</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

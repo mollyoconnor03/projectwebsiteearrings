@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Login | Molly's Earrings{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h1 class="mb-4">Login</h1>
+
+        <!-- Flash messages for login errors -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <!-- Login form -->
+        <form method="POST" action="{{ url_for('login') }}">
+            <div class="mb-3">
+                <label for="emailField" class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailField" name="emailField" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="passwordField" class="form-label">Password</label>
+                <input type="password" class="form-control" id="passwordField" name="passwordField" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+    </div>
+</section>
+{% endblock %}
+
