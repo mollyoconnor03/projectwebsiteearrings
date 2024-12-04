@@ -1,0 +1,81 @@
+<!-- templates/admin.html -->
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard - Molly's Earrings{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-5">Admin Dashboard</h1>
+
+    <!-- Earrings Overview Table -->
+    <div class="card">
+        <div class="card-body">
+            <h2 class="text-center mb-4">Earrings Overview</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover text-center">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Earring</th>
+                            <th>Description</th>
+                            <th>Material</th>
+                            <th>Units Sold</th>
+                            <th>Revenue (€)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Violet Heart Earrings</td>
+                            <td>Heart Shaped gold everyday earring made with 24k gold</td>
+                            <td>Gold</td>
+                            <td>150</td>
+                            <td>€3,000</td>  <!-- Pre-calculated revenue -->
+                        </tr>
+                        <tr>
+                            <td>Darling Large Hoops</td>
+                            <td>8mm gold hoops perfect for any occasion</td>
+                            <td>Gold</td>
+                            <td>200</td>
+                            <td>€4,400</td>  <!-- Pre-calculated revenue -->
+                        </tr>
+                        <tr>
+                            <td>Maisie Bow Studs</td>
+                            <td>Dainty bow shaped studs</td>
+                            <td>Silver</td>
+                            <td>175</td>
+                            <td>€2,975</td>  <!-- Pre-calculated revenue -->
+                        </tr>
+                        <tr>
+                            <td>Siún Diamond Hearts</td>
+                            <td>Diamond filled heart shaped studs</td>
+                            <td>Silver</td>
+                            <td>120</td>
+                            <td>€6,000</td>  <!-- Pre-calculated revenue -->
+                        </tr>
+                        <tr>
+                            <td>Daisy Silver Mini Hoops</td>
+                            <td>4mm silver hoops, perfect for stacking with our other hoops</td>
+                            <td>Silver</td>
+                            <td>95</td>
+                            <td>€2,850</td>  <!-- Pre-calculated revenue -->
+                        </tr>
+                        <tr>
+                            <td>Niamh Gold Mini Hoops</td>
+                            <td>4mm gold hoops, perfect for stacking with our other gold hoops</td>
+                            <td>Gold</td>
+                            <td>130</td>
+                            <td>€3,640</td>  <!-- Pre-calculated revenue -->
+                        </tr>
+                        <tr>
+                            <td>Fiona Chunky Hoops</td>
+                            <td>Small, thick gold hoops perfect for everyday looks.</td>
+                            <td>Gold</td>
+                            <td>80</td>
+                            <td>€2,800</td>  <!-- Pre-calculated revenue -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

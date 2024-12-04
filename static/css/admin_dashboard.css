@@ -1,0 +1,64 @@
+/* General Styling for the Admin Dashboard */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0056b3; /* Dark blue */
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    color: #0056b3; /* Dark blue for headings */
+    font-weight: bold;
+}
+
+.table {
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+th {
+    background-color: #007bff; /* Blue for table headers */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+tr:hover {
+    background-color: #e9ecef; /* Subtle blue highlight for hover */
+}
+
+td {
+    color: #495057; /* Dark gray text */
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-primary {
+    background-color: #cfe2ff; /* Light blue for header cells */
+    color: #003c82; /* Darker blue for header text */
+}
+
+.table-hover tbody tr:hover {
+    background-color: #d6eaff; /* Very light blue hover effect */
+}

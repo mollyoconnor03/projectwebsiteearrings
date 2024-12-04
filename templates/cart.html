@@ -1,0 +1,40 @@
+<!-- templates/cart.html -->
+{% extends "base.html" %}
+
+{% block title %}Your Cart - Molly's Earrings{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h2>Your Cart</h2>
+        {% if earrings %}
+            <table class="table table-striped mt-4">
+                <thead>
+                    <tr>
+                        <th>Earring Name</th>
+                        <th>Metal Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for earring in earrings %}
+                    <tr>
+                        <td>{{ earring.earring_type }}</td>
+                        <td>{{ earring.metal }}</td>
+                        <td>
+                            <form action="{{ url_for('remove_from_cart', earring_id=earring.earring_id) }}" method="POST">
+                                <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a href="{{ url_for('show_earrings') }}" class="btn btn-primary">Continue Shopping</a>
+            <!-- You can add a "Checkout" button here -->
+        {% else %}
+            <p class="mt-4">Your cart is empty. <a href="{{ url_for('show_earrings') }}">Browse earrings</a> to add to your cart.</p>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
